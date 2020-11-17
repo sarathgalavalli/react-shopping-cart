@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "title": "dress 1",
+            "description": "Dress",
+            "price": 25,
+            "availableizes": [
+                "S",
+                "M",
+                "L"
+            ],
+            "image": "/images/1.jpg"
+        },
+        {
+            "id": "1",
+            "title": "dress 1",
+            "description": "Dress",
+            "price": 35,
+            "availableizes": [
+                "S",
+                "M",
+                "L"
+            ],
+            "image": "/images/2.jpeg"
+        },
+        {
+            "id": "1",
+            "title": "dress 1",
+            "description": "Dress",
+            "price": 45,
+            "availableizes": [
+                "S",
+                "M",
+                "L"
+            ],
+            "image": "/images/3.jpeg"
+        },
+        {
+            "id": "1",
+            "title": "dress 1",
+            "description": "Dress",
+            "price": 34,
+            "availableizes": [
+                "S",
+                "M",
+                "L"
+            ],
+            "image": "/images/4.jpeg"
+        }
+    ]
+}
