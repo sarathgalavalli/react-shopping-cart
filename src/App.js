@@ -2,6 +2,7 @@ import React from "react";
 import data from "./data.json"
 import Products from "./components/Products";
 import Filter from "./components/Filter";
+import Cart from "./components/Cart";
 
 class App extends React.Component {
   constructor() {
@@ -10,10 +11,13 @@ class App extends React.Component {
       products: data.products,
       size: "",
       sort: "",
+      cartItems: [],
 
     }
     this.onFilerChange = this.onFilerChange.bind(this);
     this.onSizeChange = this.onSizeChange.bind(this);
+    // this.onAddToCart = this.onAddToCart.bind(this);
+
   }
   onFilerChange(event) {
     this.setState((state) => ({
@@ -35,6 +39,22 @@ class App extends React.Component {
       products: data.products.filter(product => product.availableizes.indexOf(event.target.value) >= 0),
     })
   }
+
+  onAddToCart = (product) => {
+    const cartItems = this.state.cartItems.slice()
+    let alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item.id === product.id) {
+        item.count++;
+        alreadyInCart = true;
+      }
+
+    });
+    if (!alreadyInCart) {
+      cartItems.push({ ...product, count: 1 });
+    }
+    this.setState({ cartItems });
+  }
   render() {
     return (
       <div className="grid-container">
@@ -45,11 +65,11 @@ class App extends React.Component {
           <div className="content">
             <div className="main">
               <Filter length={this.state.products.length} sort={this.state.sort} size={this.state.size} onFilerChange={this.onFilerChange} onSizeChange={this.onSizeChange}></Filter>
-              <Products products={this.state.products} ></Products>
+              <Products products={this.state.products} onAddToCart={this.onAddToCart}></Products>
 
             </div>
             <div className="sidebar">
-              Cart
+              <Cart cartItems={this.state.cartItems} />
             </div>
           </div>
         </main>
