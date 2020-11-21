@@ -13,19 +13,18 @@
             "image": "/images/1.jpg"
         },
         {
-            "id": "1",
+            "id": "2",
             "title": "dress 1",
             "description": "Dress",
             "price": 35,
             "availableizes": [
                 "S",
-                "M",
                 "L"
             ],
             "image": "/images/2.jpeg"
         },
         {
-            "id": "1",
+            "id": "3",
             "title": "dress 1",
             "description": "Dress",
             "price": 45,
@@ -37,7 +36,7 @@
             "image": "/images/3.jpeg"
         },
         {
-            "id": "1",
+            "id": "4",
             "title": "dress 1",
             "description": "Dress",
             "price": 34,

@@ -99,3 +99,14 @@ footer{
   align-items: center;
   
 }
+
+
+.filter{
+  display:flex;
+  justify-content: space-between;
+
+}
+
+.filter div{
+  flex: 1;
+}
